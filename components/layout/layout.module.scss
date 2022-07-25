@@ -1,0 +1,34 @@
+@import "../landingLayout/landingLayout.module.scss";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap');
+
+$dark-color: #2d2d39;
+$cursive-font: 'M PLUS Rounded 1c', sans-serif;
+
+.navbarContainer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.productHeading {
+    cursor: pointer;
+    margin: 0.8rem 0;
+    color: $orange-color;
+    font-size: larger;
+    font-family: $cursive-font;
+}
+
+.iconStyle {
+    cursor: pointer;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 1rem;
+    color: $dark-color;
+}
+
+@media screen and (max-width: 655px) {
+    .navbarContainer {
+        height: auto;
+    }   
+}

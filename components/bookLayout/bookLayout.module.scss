@@ -1,0 +1,30 @@
+@import "../landingLayout/landingLayout.module.scss";
+
+.bookLayoutContainer {
+    width: 30%;
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 8px 24px rgb(149 157 165 / 20%);
+}
+
+.bookName {
+    font-weight: bold;
+    font-family: $introductory-font;
+}
+
+@media only screen and (min-width: 620px) and (max-width: 1024px) {
+    .bookLayoutContainer {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .bookLayoutContainer {
+        width: 80%;
+    }
+}

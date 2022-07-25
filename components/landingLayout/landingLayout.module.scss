@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=PT+Serif:wght@700&display=swap');
+
+$xxx-large: xxx-large;
+$orange-color: #FF500A;
+$greetings-font: 'Noto Serif', serif;
+$introductory-font: 'Nunito Sans', sans-serif;
+$description-font: 'Source Code Pro', monospace;
+
+.landingLayoutContainer {
+    height: 90vh;
+    background-size: auto;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-image: url("/images/topRightPortal.svg");
+}
+
+.leftImageContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-size: auto;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-image: url("/images/bottomLeftPortal.svg");
+}
+
+.greetingsContainer {
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.greetingsText {
+    color: $orange-color;
+    font-size: $xxx-large;
+    font-family: $greetings-font;
+}
+
+.introductoryText {
+    font-weight: normal;
+    font-family: $introductory-font;
+}
+
+.descriptionText {
+    font-weight: normal;
+    font-family: $description-font;
+}
+
+.buttonContainer {
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 945px) {
+    .landingLayoutContainer {
+        background: none;
+    }
+
+    .leftImageContainer {
+        justify-content: flex-end;
+    }
+
+    .greetingsContainer {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .landingLayoutContainer {
+        background: none;
+        height: auto;
+    }
+
+    .leftImageContainer {
+        background: none;
+    }
+    
+    .greetingsContainer {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
