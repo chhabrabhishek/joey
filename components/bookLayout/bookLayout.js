@@ -2,8 +2,13 @@ import bookLayoutStyle from "./bookLayout.module.scss";
 import utilStyles from "../../styles/utils.module.scss";
 
 const BookLayout = ({ book }) => {
+
+    const handleBookDownload = () => {
+        window.open(book.destinationUrl, "_blank");
+    }
+
     return (
-        <div className={bookLayoutStyle.bookLayoutContainer}>
+        <div className={bookLayoutStyle.bookLayoutContainer} onClick={handleBookDownload}>
             <h4 className={`${utilStyles.regularMargin} ${bookLayoutStyle.bookName}`}>
                 {book.bookName}
                 &nbsp;by&nbsp;

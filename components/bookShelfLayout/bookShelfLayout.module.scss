@@ -1,7 +1,42 @@
+.bookShelfParentContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .bookShelfContainer {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 5vh;
     align-items: center;
     justify-content: center;
+}
+
+.searchContainer {
+    width: 50%;
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 0.25rem;
+    outline: none;
+    border: 1px solid grey;
+}
+
+.searchInput:focus {
+    border: 2px solid grey;
+}
+
+@media screen and (max-width: 655px) {
+    .searchContainer {
+        width: 80%;
+    }
 }
