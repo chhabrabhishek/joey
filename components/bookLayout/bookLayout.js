@@ -15,7 +15,7 @@ const BookLayout = ({ book }) => {
     return (
         <div className={bookLayoutStyle.bookLayoutContainer} onClick={handleBookDownload}>
             <Image
-                src={`/static/images/Artificial_Intelligence.svg`}
+                src={`/static/images/landingImage.svg`}
                 alt={book.bookName}
                 layout="responsive"
                 width={200}
