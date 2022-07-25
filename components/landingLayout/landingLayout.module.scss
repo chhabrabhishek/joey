@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=PT+Serif:wght@700&display=swap');
 
 $xxx-large: xxx-large;
-$orange-color: #FF500A;
+$theme-color: #F50057;
 $greetings-font: 'Noto Serif', serif;
 $introductory-font: 'Nunito Sans', sans-serif;
 $description-font: 'Source Code Pro', monospace;
@@ -13,7 +13,7 @@ $description-font: 'Source Code Pro', monospace;
     background-size: auto;
     background-position: right top;
     background-repeat: no-repeat;
-    background-image: url("/images/topRightPortal.svg");
+    background-image: url("/static/images/topRightPortal.svg");
 }
 
 .leftImageContainer {
@@ -25,7 +25,7 @@ $description-font: 'Source Code Pro', monospace;
     background-size: auto;
     background-position: left top;
     background-repeat: no-repeat;
-    background-image: url("/images/bottomLeftPortal.svg");
+    background-image: url("/static/images/bottomLeftPortal.svg");
 }
 
 .greetingsContainer {
@@ -39,7 +39,7 @@ $description-font: 'Source Code Pro', monospace;
 }
 
 .greetingsText {
-    color: $orange-color;
+    color: $theme-color;
     font-size: $xxx-large;
     font-family: $greetings-font;
 }

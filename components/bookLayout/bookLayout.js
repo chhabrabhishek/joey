@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import bookLayoutStyle from "./bookLayout.module.scss";
 import utilStyles from "../../styles/utils.module.scss";
 
@@ -9,6 +10,12 @@ const BookLayout = ({ book }) => {
 
     return (
         <div className={bookLayoutStyle.bookLayoutContainer} onClick={handleBookDownload}>
+            <Image
+                src={book.thumbnail}
+                layout="responsive"
+                width={200}
+                height={200}
+            />
             <h4 className={`${utilStyles.regularMargin} ${bookLayoutStyle.bookName}`}>
                 {book.bookName}
                 &nbsp;by&nbsp;
