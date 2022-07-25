@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/image";
 import bookLayoutStyle from "./bookLayout.module.scss";
 import utilStyles from "../../styles/utils.module.scss";
 
@@ -8,10 +8,15 @@ const BookLayout = ({ book }) => {
         window.open(book.destinationUrl, "_blank");
     }
 
+    const formatBookName = () => {
+        return book.subjectAssociated.replace(/\s/g, "_")
+    }
+
     return (
         <div className={bookLayoutStyle.bookLayoutContainer} onClick={handleBookDownload}>
             <Image
-                src={book.thumbnail}
+                src={`/static/images/${formatBookName()}.svg`}
+                alt={book.bookName}
                 layout="responsive"
                 width={200}
                 height={200}

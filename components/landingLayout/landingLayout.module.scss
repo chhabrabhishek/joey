@@ -8,30 +8,18 @@ $greetings-font: 'Noto Serif', serif;
 $introductory-font: 'Nunito Sans', sans-serif;
 $description-font: 'Source Code Pro', monospace;
 
-.landingLayoutContainer {
-    height: 90vh;
-    background-size: auto;
-    background-position: right top;
-    background-repeat: no-repeat;
-    background-image: url("/static/images/topRightPortal.svg");
-}
-
 .leftImageContainer {
     width: 100%;
-    height: 100%;
+    height: 85vh;
+    padding: 2rem;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    background-size: auto;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-image: url("/static/images/bottomLeftPortal.svg");
 }
 
 .greetingsContainer {
     width: 50%;
     height: 100%;
-    padding: 2rem;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -58,32 +46,43 @@ $description-font: 'Source Code Pro', monospace;
     margin-top: 2rem;
 }
 
-@media screen and (max-width: 945px) {
-    .landingLayoutContainer {
-        background: none;
-    }
+.landingImageContainer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .leftImageContainer {
-        justify-content: flex-end;
+@media screen and (max-width: 890px) {
+    .greetingsText {
+        font-size: xx-large;
     }
-
-    .greetingsContainer {
-        width: 80%;
+    
+    .introductoryText {
+        font-size: larger;
+    }
+    
+    .descriptionText {
+        font-size: small;
     }
 }
 
 @media screen and (max-width: 655px) {
-    .landingLayoutContainer {
-        background: none;
-        height: auto;
-    }
-
     .leftImageContainer {
-        background: none;
+        padding-top: 0;
+        padding-bottom: 2.5rem;
+        flex-direction: column-reverse;
     }
     
     .greetingsContainer {
         width: 100%;
+        height: 50%;
         justify-content: flex-start;
+    }
+
+    .landingImageContainer {
+        width: 100%;
+        height: 50%;
     }
 }
