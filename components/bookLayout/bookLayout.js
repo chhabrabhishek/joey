@@ -9,13 +9,14 @@ const BookLayout = ({ book }) => {
     }
 
     const formatBookName = () => {
-        return book.subjectAssociated.replace(/\s/g, "_")
+        const thumbnailUrl = book.subjectAssociated.replace(/\s/g, "");
+        return thumbnailUrl.charAt(0).toLowerCase() + thumbnailUrl.slice(1);
     }
 
     return (
         <div className={bookLayoutStyle.bookLayoutContainer} onClick={handleBookDownload}>
             <Image
-                src={`/static/images/landingImage.svg`}
+                src={`/static/images/${formatBookName()}.svg`}
                 alt={book.bookName}
                 layout="responsive"
                 width={200}
