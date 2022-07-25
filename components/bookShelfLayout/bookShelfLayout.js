@@ -33,13 +33,21 @@ const BookShelfLayout = ({ books }) => {
     return (
         <div className={bookShelfLayoutStyle.bookShelfParentContainer}>
             <div className={bookShelfLayoutStyle.searchContainer}>
-                <p className={utilStyles.regularMargin}>Search your favorite fruits</p>
+                <p className={utilStyles.regularMargin}>Search your favorite books.</p>
                 <input
                     className={bookShelfLayoutStyle.searchInput}
                     placeholder="Enter a book, author or a publisher's name"
                     onChange={handleSearchBooks}
                 />
             </div>
+            <p className="clickText">
+                👇🏻 Click on any of the cards to view the book.
+                <style jsx>{`
+                    .clickText {
+                        font-size: small;
+                    }
+                `}</style>
+            </p>
             <div id="bookShelfContainer" className={bookShelfLayoutStyle.bookShelfContainer}>
                 {
                     visibleBooks.map(item => <BookLayout key={item._id} book={item}></BookLayout>)
