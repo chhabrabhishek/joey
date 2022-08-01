@@ -46,7 +46,7 @@ const SubjectDataLayout = ({subjectData}) => {
                             <li className={utilStyles.regularMargin} key={index}>
                                 {
                                     item.bookUrl?
-                                    <a style={{textDecoration: "underline"}} href={item.bookUrl} target="_blank" className={utilStyles.regularMargin} key={index}>{item.bookName}</a>:
+                                    <a style={{textDecoration: "underline"}} href={item.bookUrl} target="_blank" rel="noreferrer" className={utilStyles.regularMargin} key={index}>{item.bookName}</a>:
                                     <p className={utilStyles.regularMargin} key={index}>{item.bookName}</p>
                                 }
                             </li>
@@ -64,7 +64,7 @@ const SubjectDataLayout = ({subjectData}) => {
                                         {item.links.map((link, index) => 
                                             <li className={utilStyles.regularMargin} key={index}>
                                                 {
-                                                    <a style={{textDecoration: "underline", wordBreak: "break-word"}} href={link} target="_blank" className={utilStyles.regularMargin} key={index}>{link}</a>
+                                                    <a style={{textDecoration: "underline", wordBreak: "break-word"}} href={link} target="_blank" rel="noreferrer" className={utilStyles.regularMargin} key={index}>{link}</a>
                                                 }
                                             </li>
                                         )}
