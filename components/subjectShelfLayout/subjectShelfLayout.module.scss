@@ -1,11 +1,11 @@
-.bookShelfParentContainer {
+.subjectShelfParentContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 }
 
-.bookShelfContainer {
+.subjectShelfContainer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;

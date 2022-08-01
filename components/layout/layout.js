@@ -1,6 +1,5 @@
+import Link from "next/link";
 import Head from "next/head";
-import { IoBag } from "react-icons/io5";
-import { IoMdHelp } from "react-icons/io";
 import layoutStyle from "./layout.module.scss";
 
 export const siteTitle = "joey";
@@ -17,11 +16,9 @@ const Layout = ({ children }) => {
                 <meta name="og:title" content={siteTitle} />
             </Head>
             <div className={layoutStyle.navbarContainer}>
-                <p className={layoutStyle.productHeading}>{siteTitle}</p>
-                <div>
-                    <IoMdHelp className={layoutStyle.iconStyle} />
-                    <IoBag className={layoutStyle.iconStyle} />
-                </div>
+                <Link href="/">
+                    <a className={layoutStyle.productHeading}>{siteTitle}</a>
+                </Link>
             </div>
             <main>{children}</main>
         </div>

@@ -5,27 +5,27 @@ import clientPromise from "../lib/mongodb";
 import { InferGetStaticPropsType } from 'next';
 import Layout, { siteTitle } from "../components/layout/layout";
 import LandingLayout from "../components/landingLayout/landingLayout";
-import BookShelfLayout from "../components/bookShelfLayout/bookShelfLayout";
+import SubjectShelfLayout from "../components/subjectShelfLayout/subjectShelfLayout";
 
-const Home: NextPage = ({ books }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home: NextPage = ({ subjects }: InferGetStaticPropsType<typeof getStaticProps>) => {
   	return (
 		<Layout>
 			<Head>
 				<title>{ siteTitle }</title>
 			</Head>
 			<LandingLayout></LandingLayout>
-			<BookShelfLayout books={books}></BookShelfLayout>
+			<SubjectShelfLayout subjects={subjects}></SubjectShelfLayout>
 		</Layout>
   	);
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
     const client = await clientPromise;
-    let books = await client.db("bitsDatabase").collection('booksCollection').find({})
+    let subjects = await client.db("bitsDatabase").collection('subjectsCollection').find({})
         .sort({ metacritic: -1 })
         .toArray();
 
-	if (!books.length) {
+	if (!subjects.length) {
 		return {
 			notFound: true,
 		}
@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   
     return {
         props: {
-            books,
+            subjects,
         },
     }
 }

@@ -1,6 +1,6 @@
 @import "../landingLayout/landingLayout.module.scss";
 
-.bookLayoutContainer {
+.subjectLayoutContainer {
     width: 30%;
     display: flex;
     padding: 1rem;
@@ -13,19 +13,20 @@
     box-shadow: 0 8px 24px rgb(149 157 165 / 20%);
 }
 
-.bookName {
+.subjectName {
+    text-align: center;
     font-weight: normal;
     font-family: $introductory-font;
 }
 
 @media only screen and (min-width: 620px) and (max-width: 1024px) {
-    .bookLayoutContainer {
+    .subjectLayoutContainer {
         width: 40%;
     }
 }
 
 @media screen and (max-width: 655px) {
-    .bookLayoutContainer {
+    .subjectLayoutContainer {
         width: 80%;
     }
 }

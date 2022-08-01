@@ -6,7 +6,7 @@ const handler = async (
 	response: NextApiResponse<any>
 ) => {
   	const client = await clientPromise;
-  	let books = await client.db("bitsDatabase").collection('booksCollection').find({})
+  	let books = await client.db("bitsDatabase").collection('subjectsCollection').find({})
     	.sort({ metacritic: -1 })
     	.toArray();
 	response.json(books);
