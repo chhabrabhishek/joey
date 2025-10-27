@@ -1,0 +1,26 @@
+name: Run Shell Script with Inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Target environment (e.g. dev, prod)"
+        required: true
+        default: "dev"
+      version:
+        description: "Version number to deploy"
+        required: false
+        default: "latest"
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run shell script with inputs
+        run: |
+          echo "Running script for environment: ${{ github.event.inputs.environment }}"
+          echo "Version: ${{ github.event.inputs.version }}"
