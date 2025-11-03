@@ -7,8 +7,14 @@ on:
         description: "Target environment (e.g. dev, prod)"
         required: true
         default: "dev"
-      version:
+      sonar:
         description: "Version number to deploy"
+        type: boolean
+        required: false
+        default: "latest"
+      jfrog:
+        description: "Version number to deploy"
+        type: boolean
         required: false
         default: "latest"
 
@@ -22,5 +28,4 @@ jobs:
 
       - name: Run shell script with inputs
         run: |
-          echo "Running script for environment: ${{ github.event.inputs.environment }}"
-          echo "Version: ${{ github.event.inputs.version }}"
+          echo "Azure"

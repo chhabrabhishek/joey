@@ -1,0 +1,31 @@
+name: Run Shell Script with Inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Target environment (e.g. dev, prod)"
+        required: true
+        default: "dev"
+      sonar:
+        description: "Version number to deploy"
+        type: boolean
+        required: false
+        default: "latest"
+      jfrog:
+        description: "Version number to deploy"
+        type: boolean
+        required: false
+        default: "latest"
+
+jobs:
+  run-script:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run shell script with inputs
+        run: |
+          echo "Maven"
