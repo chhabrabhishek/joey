@@ -5,18 +5,22 @@ on:
     inputs:
       environment:
         description: "Target environment (e.g. dev, prod)"
+        type: choice
         required: true
         default: "dev"
+        options:
+          - pat
+          - atdev
       sonar:
         description: "Version number to deploy"
         type: boolean
         required: false
-        default: "latest"
+        default: "false"
       jfrog:
         description: "Version number to deploy"
         type: boolean
         required: false
-        default: "latest"
+        default: "true"
 
 jobs:
   run-script:
